@@ -1,88 +1,25 @@
-﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
-// [345, 897, 568, 234] -> 2
+﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
 
-// int [] nums = new int[10];
-// void array(int[] nums)
-// {
-// Console.Write("[");
-// for (int i = 0; i < nums.Length; i++)
-//  {
-//     nums [i] = new Random().Next(100, 1000);
-//     Console.Write($"{nums [i]}, ");
-//  }
-// Console.Write("]");
-// }
-// array(nums);
+Console.Write("Введите количество элементов массива: ");
+int M = Convert.ToInt32(Console.ReadLine()); 
+int [] nums = new int[M];
+for (int i = 0; i < nums.Length; i++)
+ {
+     Console.Write($"Введите элементы массива под индексом {i}: ");
+     nums[i] = Convert.ToInt32(Console.ReadLine()); 
+ }
+int sum = 0;
+for (int i = 0; i < nums.Length; i++)
+{ 
+   if (nums[i] > 0)
+   { 
+      sum = sum + 1;
+   }
+}
+Console.WriteLine();
+Console.Write($"Чисел больше нуля ввёл пользователь: {sum}");
 
-// int b = 0; 
-// for (int i = 0; i < nums.Length; i++)
-// {
-//     if (nums[i] % 2 == 0)
-//     {
-//         b = b + 1; 
-//     }
-// }
-// Console.WriteLine();
-// Console.WriteLine($"Число чётных цифр в массиве: {b}");
-
-// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-// [3, 7, 23, 12] -> 19; [-4, -6, 89, 6] -> 0
-
-// int [] nums = new int[10];
-// void array(int[] nums)
-// {
-// Console.Write("[");
-// for (int i = 0; i < nums.Length; i++)
-//  {
-//     nums [i] = new Random().Next(0, 20);
-//     Console.Write($"{nums [i]}, ");
-//  }
-// Console.Write("]");
-// }
-// array(nums);
-
-// int sum = 0; 
-// for (int i = 0; i < nums.Length; i = i + 2)
-// {
-//  sum = nums [i] + sum;
-// }
-// Console.WriteLine();
-// Console.Write($"Сумма элементов стоящих на нечётных позициях: {sum}");
-
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-// [3 7 22 2 78] -> 76
-
-// int [] nums = new int[10];
-// void array(int[] nums)
-// {
-// Console.Write("[");
-// for (int i = 0; i < nums.Length; i++)
-//  {
-//     nums [i] = new Random().Next(0, 80);
-//     Console.Write($"{nums [i]}, ");
-//  }
-// Console.Write("]");
-// }
-// array(nums);
-
-// int min = nums [0];
-// for (int i = 0; i < nums.Length; i++)
-// { 
-//    if (nums[i] < min)
-//    { 
-//       min = nums[i];
-//    }
-// }
-
-// int max = nums [0];
-// for (int i = 0; i < nums.Length; i++)
-// { 
-//    if (nums[i] > max)
-//    { 
-//       max = nums[i];
-//    }
-// }
-// int dif = 0; 
-// dif = max - min;
-// Console.WriteLine();
-// Console.Write($"Разница самого большого и самого маленького элементов массива: {dif}");
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
