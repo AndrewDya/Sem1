@@ -2,7 +2,7 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-Console.Write("Введите количество элементов массива: ");
+Console.Write("Введите количество элементов массива, M: ");
 int M = Convert.ToInt32(Console.ReadLine()); 
 int [] nums = new int[M];
 for (int i = 0; i < nums.Length; i++)
