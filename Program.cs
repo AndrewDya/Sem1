@@ -8,11 +8,24 @@
 // Задача: Написать программу, которая из имеющегося массива строк формирует массив из строк, длина которых меньше либо равна 3 символа. Первоначальный массив можно ввести с клавиатуры, 
 // либо задать на старте выполнения алгоритма. (Кол-во элементов первоначального массива?)
 
+//  Console.WriteLine(elements[i].Length);
+
 string[] elements = new string[] { "29", "Monday", "Russia", "she", "3", "hi", "help" };
+int sum = 0;
 for (int i = 0; i < elements.Length; i++)
 {
-//    Console.WriteLine(elements[i].Length);
-    if (elements[i].Length >= 3) 
-    Console.WriteLine($"[ + {elements[i]}, ")
+    if (elements[i].Length <= 3) 
+    sum ++;
 }
-Console.WriteLine($"]")
+Console.WriteLine(sum);
+string[] elements1 = new string[sum];
+int k = 0;
+for (int j = 0; j < elements.Length; j++)
+{
+   if (elements[j].Length <= 3)
+   {
+   elements1[k] = elements[j];
+   k = k + 1;
+   }
+}
+Console.WriteLine("[{0}]", string.Join(", ", elements1));
