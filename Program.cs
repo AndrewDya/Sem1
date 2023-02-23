@@ -29,7 +29,7 @@ for (int j = 0; j < elements.Length; j++)
    if (elements[j].Length <= 3)
    {
    elements1[k] = elements[j];
-   k = k + 1;
+   k ++;
    }
 }
 Console.WriteLine("[{0}]", string.Join(", ", elements1));
